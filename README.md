@@ -101,8 +101,13 @@ Filling or guessing these values would introduce false information.
 
 After cleaning, I verified the results using:
 <code>.dtype</code>, <code>.unique()</code>, <code>.dropna()</code>, and general dataset inspection.
-<hr>
 
+Some freelancers have missing or zero hourly rates.  
+If the freelancer is active but the <code>hourly_rate</code> is <code>0</code> or <code>NaN</code>, it likely means they did not earn anything during the period or the platform failed to collect their information.  
+Missing values are left as <code>NaN</code> instead of being guessed, to maintain truth in the data.
+
+This principle applies to ratings and other columns as well: **never invent data**, only clean what exists.
+<hr>
 <h3>Cleaning the <code>client_satisfaction</code> column:</h3>
 
 The <code>client_satisfaction</code> column contained percentages stored as strings,
@@ -134,17 +139,6 @@ This ensures that any text, empty values, or invalid entries are converted to <c
 I intentionally did **not fill missing ratings**.  
 A missing rating usually means the freelancer has not been rated yet, or was not active.  
 Filling it with a default value would introduce false information and distort the dataset.
-
----
-
-<h3>Notes on <code>hourly_rate (USD)</code> and missing values:</h3>
-
-Some freelancers have missing or zero hourly rates.  
-
-If the freelancer is active but the <code>hourly_rate</code> is <code>0</code> or <code>NaN</code>, it likely means they did not earn anything during the period or the platform failed to collect their information.  
-Missing values are left as <code>NaN</code> instead of being guessed, to maintain truth in the data.
-
-This principle applies to ratings and other columns as well: **never invent data**, only clean what exists.
 <br>
 <hr>
 <br>
