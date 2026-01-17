@@ -3,6 +3,32 @@
 <h1 align="center">📊 Dataset:
   global_freelancers_raw.csv
 </h1>
+<h2 align="center2>📌 Project Summary: Global Freelancers Data Cleaning</h2>
+
+The Problem: The raw dataset contained over hundreds of thousands of freelancer records with inconsistent formats, missing values, mixed numeric/categorical data, and text irregularities. Columns like Gender, is_active, Age, Hourly Rate, Client Satisfaction, and Rating were messy and unreliable for analysis.
+
+The Fix: I cleaned and standardized the data by:
+
+Harmonizing categorical columns (Gender, is_active)
+
+Converting numeric columns (Age, Hourly Rate, Client Satisfaction, Rating) and handling missing or invalid values safely
+
+Preserving missing data as NaN instead of guessing
+
+Removing symbols, extra characters, and formatting inconsistencies in text and numeric columns
+
+The Result: A fully cleaned, analysis-ready dataset that allows accurate reporting and analysis of freelancer demographics, activity, rates, and client satisfaction. All changes were verified to ensure data integrity.
+
+📁 Repository contains:
+
+raw_data/ → Original messy dataset
+
+cleaned_data/ → Cleaned and standardized CSV
+
+scripts/ → Python cleaning scripts
+
+Before/After examples for quick reference
+<hr>
 
 <h3>🧹 Data Cleaning Process:</h3>
 
