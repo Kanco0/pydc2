@@ -3,7 +3,7 @@
 <h1 align="center">📊 Dataset:
   global_freelancers_raw.csv
 </h1>
-<h2 align="center2>📌 Project Summary: Global Freelancers Data Cleaning</h2>
+<h2 align="center">📌 Project Summary: Global Freelancers Data Cleaning</h2>
 
 The Problem: The raw dataset contained over hundreds of thousands of freelancer records with inconsistent formats, missing values, mixed numeric/categorical data, and text irregularities. Columns like Gender, is_active, Age, Hourly Rate, Client Satisfaction, and Rating were messy and unreliable for analysis.
 
@@ -29,7 +29,6 @@ scripts/ → Python cleaning scripts
 
 Before/After examples for quick reference
 <hr>
-
 <h3>🧹 Data Cleaning Process:</h3>
 
 First thing first, I loaded the raw data into a CSV reader using <code>pd.read_csv()</code>.  
